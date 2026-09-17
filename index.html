@@ -1,74 +1,726 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="rtl">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aurora — Simple Landing Page</title>
-<link rel="stylesheet" href="style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="color-scheme" content="light dark">
+<meta name="description" content="درس تفاعلي: الهوية الإسلامية — الوحدة الرابعة: هويتنا، الصف الثاني عشر، الفصل الدراسي الأول. إعداد: أ. رقيه بنت سعود البوسعيدية، مدرسة الشيماء للبنات (٩-١٢).">
+<meta property="og:type" content="website">
+<meta property="og:title" content="الدرس الأول: الهوية الإسلامية">
+<meta property="og:description" content="درس تفاعلي للصف الثاني عشر: مفهوم الهوية وأدلتها، وطرق الحفاظ عليها، والهوية والمواطنة، وتدبّر، وتقويم ختامي مصحّح.">
+<meta property="og:locale" content="ar_OM">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Ctext y=%27.9em%27 font-size=%2790%27%3E%F0%9F%95%8C%3C/text%3E%3C/svg%3E">
+<style>
+:root{color-scheme:light dark; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px)}
+body{margin:0}
+img{max-width:100%}
+[hidden]{display:none!important}
+</style>
+<title>الهوية الإسلامية</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700&display=swap">
+<style>
+:root{
+  --paper:#f7f2e8; --surface:#fffdf8; --surface2:#efe8da;
+  --ink:#1b2a26; --ink-soft:#50605b; --line:#ded2bc;
+  --pine:#12564b; --pine-ink:#0d3f37; --pine-soft:#e2ede8;
+  --brass:#9a6418; --brass-soft:#f6e8d2;
+  --plum:#6a3049; --plum-soft:#f4e6ec;
+  --ok:#1c6f45; --ok-soft:#e3f1e7;
+  --no:#9c2f26; --no-soft:#f8e4e1;
+  --shadow:0 1px 0 rgba(27,42,38,.04), 0 10px 26px -18px rgba(27,42,38,.45);
+  --f-disp:"Aref Ruqaa","Amiri",Georgia,serif;
+  --f-body:"Tajawal","Rubik",system-ui,"Segoe UI",sans-serif;
+  --f-text:"Amiri","Aref Ruqaa",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#0f1513; --surface:#171f1c; --surface2:#1e2723;
+    --ink:#ece4d4; --ink-soft:#a8b3ad; --line:#31403a;
+    --pine:#72c3b0; --pine-ink:#9ad7c6; --pine-soft:#152924;
+    --brass:#d7a458; --brass-soft:#2a2115;
+    --plum:#dda7bd; --plum-soft:#2a1b22;
+    --ok:#6cc48f; --ok-soft:#15281d;
+    --no:#e58b80; --no-soft:#2b1917;
+    --shadow:0 1px 0 rgba(0,0,0,.2), 0 12px 28px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#0f1513; --surface:#171f1c; --surface2:#1e2723;
+  --ink:#ece4d4; --ink-soft:#a8b3ad; --line:#31403a;
+  --pine:#72c3b0; --pine-ink:#9ad7c6; --pine-soft:#152924;
+  --brass:#d7a458; --brass-soft:#2a2115;
+  --plum:#dda7bd; --plum-soft:#2a1b22;
+  --ok:#6cc48f; --ok-soft:#15281d;
+  --no:#e58b80; --no-soft:#2b1917;
+  --shadow:0 1px 0 rgba(0,0,0,.2), 0 12px 28px -18px rgba(0,0,0,.8);
+}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--f-body); font-size:16px; line-height:1.85;
+  direction:rtl; text-align:right;
+  -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:1020px; margin:0 auto; padding-inline:18px; padding-block:0 64px}
+
+/* ---------- header ---------- */
+.masthead{
+  position:relative; overflow:hidden; margin-block:0 26px;
+  border:1px solid var(--line); border-top:none;
+  border-radius:0 0 22px 22px; background:var(--surface);
+  box-shadow:var(--shadow); padding:34px 26px 26px;
+}
+.masthead::before{
+  content:""; position:absolute; inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='72' height='72' viewBox='0 0 72 72'%3E%3Cg fill='none' stroke='%2312564b' stroke-width='1.1'%3E%3Cpath d='M36 4 46 14 58 14 58 26 68 36 58 46 58 58 46 58 36 68 26 58 14 58 14 46 4 36 14 26 14 14 26 14Z'/%3E%3Ccircle cx='36' cy='36' r='9'/%3E%3C/g%3E%3C/svg%3E");
+  background-size:72px 72px; opacity:.09; pointer-events:none;
+}
+:root[data-theme="dark"] .masthead::before{opacity:.15}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .masthead::before{opacity:.15}}
+.masthead>*{position:relative}
+.eyebrow{
+  font-size:.78rem; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--brass); font-weight:700; margin:0 0 6px;
+}
+h1{
+  font-family:var(--f-disp); font-weight:700; margin:0;
+  font-size:clamp(2.1rem,7vw,3.4rem); line-height:1.35;
+  color:var(--pine-ink); text-wrap:balance;
+}
+:root[data-theme="dark"] h1{color:var(--pine-ink)}
+.lead{margin:10px 0 0; max-width:60ch; color:var(--ink-soft); font-size:1.02rem}
+.credits{
+  margin-top:20px; padding-top:16px; border-top:1px dashed var(--line);
+  display:flex; flex-wrap:wrap; gap:8px 22px; font-size:.9rem; color:var(--ink-soft);
+}
+.credits b{color:var(--ink); font-weight:700}
+.credits span{display:flex; gap:7px; align-items:baseline}
+
+/* ---------- nav ---------- */
+nav.toc{
+  position:sticky; top:env(safe-area-inset-top,0px); z-index:9;
+  background:var(--paper);
+  background:color-mix(in srgb,var(--paper) 88%,transparent);
+  backdrop-filter:blur(10px);
+  border-block:1px solid var(--line); margin-bottom:32px;
+}
+nav.toc ul{
+  display:flex; gap:4px; list-style:none; margin:0; padding:8px 0;
+  overflow-x:auto; scrollbar-width:thin;
+}
+nav.toc a{
+  display:block; white-space:nowrap; text-decoration:none;
+  padding:6px 13px; border-radius:999px; font-size:.9rem; font-weight:500;
+  color:var(--ink-soft); border:1px solid transparent;
+}
+nav.toc a:hover,nav.toc a:focus-visible{color:var(--pine); background:var(--pine-soft); border-color:var(--line)}
+
+/* ---------- sections ---------- */
+section{margin-block:0 46px; scroll-margin-top:84px}
+.s-head{display:flex; align-items:center; gap:12px; margin-bottom:6px}
+.s-num{
+  flex:none; width:34px; height:34px; border-radius:10px;
+  display:grid; place-items:center; font-weight:700; font-size:.95rem;
+  background:var(--pine); color:#fffdf8; font-variant-numeric:tabular-nums;
+}
+:root[data-theme="dark"] .s-num{color:#0f1513}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .s-num{color:#0f1513}}
+h2{
+  font-family:var(--f-disp); font-weight:700; margin:0;
+  font-size:clamp(1.45rem,4.2vw,2rem); color:var(--ink); line-height:1.45;
+}
+.s-rule{height:2px; background:linear-gradient(to left,var(--brass),transparent); margin:2px 0 20px; border:0}
+.s-note{margin:-8px 0 20px; color:var(--ink-soft); font-size:.94rem}
+
+/* ---------- cards ---------- */
+.grid{display:grid; gap:16px}
+.g2{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
+.g4{grid-template-columns:repeat(auto-fit,minmax(215px,1fr))}
+.card{
+  background:var(--surface); border:1px solid var(--line); border-radius:14px;
+  padding:18px 18px 20px; box-shadow:var(--shadow);
+}
+.card h3{
+  margin:0 0 10px; font-size:1.02rem; font-weight:700; color:var(--pine);
+  display:flex; align-items:center; gap:8px;
+}
+.card h3::before{
+  content:""; width:7px; height:7px; flex:none; rotate:45deg;
+  background:var(--brass);
+}
+.card p{margin:0; color:var(--ink)}
+.card ol,.card ul{margin:0; padding-inline-start:1.2em}
+.card li{margin-block:4px}
+
+/* ---------- evidence blocks ---------- */
+.proof{
+  border:1px solid var(--line); border-radius:14px; padding:16px 18px;
+  background:var(--pine-soft); position:relative;
+}
+.proof.hadith{background:var(--brass-soft)}
+.proof .tag{
+  display:inline-block; font-size:.74rem; font-weight:700; letter-spacing:.08em;
+  padding:2px 9px; border-radius:999px; margin-bottom:8px;
+  background:var(--surface); border:1px solid var(--line); color:var(--brass);
+}
+.proof.ayah .tag{color:var(--pine)}
+.ayah-text{
+  font-family:var(--f-text); font-size:1.22rem; line-height:2.1;
+  color:var(--pine-ink); margin:0;
+}
+:root[data-theme="dark"] .ayah-text{color:var(--pine-ink)}
+.hadith-text{font-family:var(--f-text); font-size:1.14rem; line-height:2; margin:0; color:var(--ink)}
+.isnad{display:block; font-family:var(--f-body); font-size:.86rem; color:var(--ink-soft); margin-top:8px}
+
+/* ---------- activity ---------- */
+.activity{
+  border:1px solid var(--brass); border-radius:16px; overflow:hidden;
+  background:var(--surface); box-shadow:var(--shadow);
+}
+.activity-head{
+  background:var(--brass-soft); border-bottom:1px solid var(--line);
+  padding:12px 18px; font-weight:700; color:var(--brass);
+  display:flex; flex-wrap:wrap; gap:6px 12px; align-items:center;
+}
+.activity-head .pg{font-size:.82rem; font-weight:500; color:var(--ink-soft)}
+.activity-body{padding:18px}
+.qline{font-weight:700; margin:14px 0 0; color:var(--ink)}
+button{font-family:inherit; font-size:1rem; cursor:pointer}
+.btn{
+  margin-top:14px; border:1px solid var(--pine); background:var(--pine); color:#fffdf8;
+  padding:9px 18px; border-radius:10px; font-weight:700; font-size:.94rem;
+}
+:root[data-theme="dark"] .btn{color:#0f1513}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#0f1513}}
+.btn.ghost{background:transparent; color:var(--pine); border-color:var(--line)}
+.btn:hover{filter:brightness(1.07)}
+.reveal{
+  margin-top:14px; border-inline-start:3px solid var(--ok); background:var(--ok-soft);
+  border-radius:0 10px 10px 0; padding:14px 16px;
+}
+.reveal p{margin:0 0 6px; font-weight:700; color:var(--ok)}
+.reveal ol{margin:0; padding-inline-start:1.3em}
+
+/* ---------- methods (accordion) ---------- */
+.tools{display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px}
+details.way{
+  border:1px solid var(--line); border-radius:14px; background:var(--surface);
+  box-shadow:var(--shadow); margin-bottom:12px; overflow:hidden;
+}
+details.way>summary{
+  list-style:none; cursor:pointer; padding:14px 18px;
+  display:flex; align-items:center; gap:12px; font-weight:700; font-size:1.05rem;
+}
+details.way>summary::-webkit-details-marker{display:none}
+details.way>summary::after{
+  content:"+"; margin-inline-start:auto; font-size:1.3rem; color:var(--brass); line-height:1;
+}
+details.way[open]>summary::after{content:"–"}
+details.way[open]>summary{background:var(--surface2); border-bottom:1px solid var(--line)}
+.way-n{
+  flex:none; width:30px; height:30px; border-radius:50%; display:grid; place-items:center;
+  background:var(--brass-soft); color:var(--brass); border:1px solid var(--brass);
+  font-size:.92rem; font-variant-numeric:tabular-nums;
+}
+.way-body{padding:16px 18px 20px; display:grid; gap:14px}
+.way-body>p{margin:0}
+.sub{margin:0; padding-inline-start:1.25em}
+.sub li{margin-block:5px}
+
+/* ---------- poem ---------- */
+.tadabbur{
+  border:1px solid var(--line); border-radius:16px; background:var(--surface2);
+  padding:20px 18px; box-shadow:var(--shadow);
+}
+.tadabbur .intro{margin:0 0 18px; color:var(--ink-soft); font-size:.97rem}
+.bayt{
+  display:grid; grid-template-columns:1fr auto 1fr; gap:6px 14px; align-items:center;
+  padding:9px 0; border-bottom:1px dotted var(--line);
+  font-family:var(--f-text); font-size:1.15rem; line-height:1.95;
+}
+.bayt:last-of-type{border-bottom:0}
+.bayt .orn{color:var(--brass); font-size:.85rem; opacity:.75}
+.bayt .sadr{text-align:right}
+.bayt .ajz{text-align:left}
+mark.g{
+  background:transparent; color:inherit; font-weight:700;
+  border-bottom:2px dotted var(--brass); padding-bottom:1px; transition:background .25s;
+}
+mark.g.on{background:var(--brass-soft); border-radius:4px}
+.gloss{
+  display:flex; flex-wrap:wrap; gap:8px; margin-top:18px;
+  padding-top:14px; border-top:1px solid var(--line);
+}
+.gloss button{
+  background:var(--surface); border:1px solid var(--line); border-radius:999px;
+  padding:5px 12px; font-size:.88rem; color:var(--ink);
+}
+.gloss button:hover,.gloss button[aria-pressed="true"]{border-color:var(--brass); color:var(--brass)}
+.gloss b{color:var(--pine)}
+
+/* ---------- quiz ---------- */
+.quiz-bar{
+  display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px;
+  background:var(--surface); border:1px solid var(--line); border-radius:14px;
+  padding:12px 16px; margin-bottom:18px; box-shadow:var(--shadow);
+}
+.score{font-weight:700; font-variant-numeric:tabular-nums}
+.score em{font-style:normal; color:var(--pine); font-size:1.25rem}
+.meter{flex:1 1 140px; height:8px; border-radius:99px; background:var(--surface2); overflow:hidden; min-width:120px}
+.meter i{display:block; height:100%; width:0; background:var(--pine); transition:width .35s}
+.qgroup{margin-bottom:26px}
+.qgroup>h3{
+  font-size:1.05rem; margin:0 0 4px; color:var(--brass); font-weight:700;
+}
+.qgroup>.hint{margin:0 0 14px; color:var(--ink-soft); font-size:.92rem}
+.q{
+  background:var(--surface); border:1px solid var(--line); border-radius:14px;
+  padding:14px 16px; margin-bottom:10px; box-shadow:var(--shadow);
+}
+.q-top{display:flex; gap:10px; align-items:flex-start}
+.q-key{
+  flex:none; min-width:26px; height:26px; padding-inline:5px; border-radius:8px;
+  background:var(--pine-soft); color:var(--pine); font-weight:700; font-size:.88rem;
+  display:grid; place-items:center;
+}
+.q-text{margin:0; flex:1}
+.q-text u{text-decoration:none; border-bottom:2px solid var(--brass); font-weight:700; padding-bottom:1px}
+.q-text .v{font-family:var(--f-text); font-size:1.1rem}
+.opts{display:flex; flex-wrap:wrap; gap:8px; margin:12px 0 0; padding:0 36px 0 0}
+.opts button{
+  border:1px solid var(--line); background:var(--surface2); color:var(--ink);
+  border-radius:10px; padding:7px 15px; font-size:.94rem; font-weight:500;
+}
+.opts button:hover:not(:disabled){border-color:var(--pine); color:var(--pine)}
+.opts button:disabled{cursor:default; opacity:.9}
+.opts button.picked-ok{background:var(--ok-soft); border-color:var(--ok); color:var(--ok); font-weight:700}
+.opts button.picked-no{background:var(--no-soft); border-color:var(--no); color:var(--no); font-weight:700}
+.opts button.show-ok{border-color:var(--ok); color:var(--ok); font-weight:700}
+.fb{margin:12px 36px 0 0; padding:10px 13px; border-radius:10px; font-size:.95rem}
+.fb.good{background:var(--ok-soft); border-inline-start:3px solid var(--ok)}
+.fb.bad{background:var(--no-soft); border-inline-start:3px solid var(--no)}
+.fb b{color:var(--pine)}
+footer.end{
+  margin-top:34px; padding-top:18px; border-top:1px solid var(--line);
+  color:var(--ink-soft); font-size:.88rem; display:flex; flex-wrap:wrap; gap:6px 18px;
+}
+@media (max-width:520px){
+  .bayt{grid-template-columns:1fr; gap:0; text-align:right}
+  .bayt .ajz{text-align:right}
+  .bayt .orn{display:none}
+  .opts,.fb{padding-inline-end:0; margin-inline-end:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+:focus-visible{outline:2px solid var(--brass); outline-offset:2px; border-radius:6px}
+</style>
 </head>
 <body>
-
-<header class="nav">
-  <div class="nav-inner">
-    <div class="logo">Aurora</div>
-    <nav>
-      <a href="#features">Features</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+<div dir="rtl" lang="ar">
+<header class="masthead">
+  <div class="wrap" style="padding-block:0">
+    <p class="eyebrow">الوحدة الرابعة · هويتنا</p>
+    <h1>الدرس الأول: الهوية الإسلامية</h1>
+    <p class="lead">درس تفاعلي يعرض مفهوم الهوية وأدلتها، وطرق الحفاظ عليها، وعلاقتها بالمواطنة، وينتهي بتقويم ختامي يصحّح إجاباتك في الحال.</p>
+    <div class="credits">
+      <span><b>الصف:</b> الثاني عشر</span>
+      <span><b>الفصل:</b> الدراسي الأول</span>
+      <span><b>إعداد:</b> أ. رقيه بنت سعود البوسعيدية</span>
+      <span><b>المدرسة:</b> الشيماء للبنات (٩–١٢)</span>
+    </div>
   </div>
 </header>
 
-<main>
-  <section class="hero">
-    <h1>Build something <span>beautiful</span> today.</h1>
-    <p>A tiny starter site — clean, fast, and framework-free. Edit the files in this folder and refresh to see changes instantly.</p>
-    <div class="hero-actions">
-      <button class="btn primary" id="ctaBtn">Get Started</button>
-      <a class="btn secondary" href="#features">Learn more</a>
+<nav class="toc" aria-label="محاور الدرس">
+  <div class="wrap" style="padding-block:0">
+    <ul>
+      <li><a href="#m1">مفهوم الهوية</a></li>
+      <li><a href="#m2">أدلة تؤكد المفهوم</a></li>
+      <li><a href="#m3">نشاط (١)</a></li>
+      <li><a href="#m4">طرق الحفاظ على الهوية</a></li>
+      <li><a href="#m5">الهوية والمواطنة</a></li>
+      <li><a href="#m6">تدبّر</a></li>
+      <li><a href="#m7">التقويم الختامي</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="wrap">
+
+  <section id="m1">
+    <div class="s-head"><span class="s-num">١</span><h2>مفهوم الهوية</h2></div>
+    <hr class="s-rule">
+    <div class="grid g2">
+      <article class="card">
+        <h3>المفهوم العام للهوية</h3>
+        <p>الخصوصية والتميّز عن الغير.</p>
+      </article>
+      <article class="card">
+        <h3>مفهوم الهوية الإسلامية</h3>
+        <p>صدق الانتماء إلى الله ورسوله، والعمل بالإسلام عقيدة وشرعًا، فعلًا وتركًا في جميع مناحي الحياة.</p>
+      </article>
     </div>
   </section>
 
-  <section class="features" id="features">
-    <div class="feature-card">
-      <div class="icon">⚡</div>
-      <h3>Fast</h3>
-      <p>No build step, no dependencies. Just open <code>index.html</code> and go.</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">🎨</div>
-      <h3>Customizable</h3>
-      <p>Plain HTML, CSS and JS — easy to tweak into whatever you need next.</p>
-    </div>
-    <div class="feature-card">
-      <div class="icon">📦</div>
-      <h3>Self-contained</h3>
-      <p>Everything for this project lives in its own <code>test/</code> folder.</p>
+  <section id="m2">
+    <div class="s-head"><span class="s-num">٢</span><h2>أدلة تؤكد مفهوم الهوية الإسلامية</h2></div>
+    <hr class="s-rule">
+    <div class="grid g2">
+      <div class="proof ayah">
+        <span class="tag">دليل من القرآن</span>
+        <p class="ayah-text">قال تعالى: ﴿إِنَّمَا الْمُؤْمِنُونَ الَّذِينَ إِذَا ذُكِرَ اللَّهُ وَجِلَتْ قُلُوبُهُمْ وَإِذَا تُلِيَتْ عَلَيْهِمْ آيَاتُهُ زَادَتْهُمْ إِيمَانًا وَعَلَى رَبِّهِمْ يَتَوَكَّلُونَ﴾.</p>
+      </div>
+      <div class="proof hadith">
+        <span class="tag">دليل من السنة</span>
+        <p class="hadith-text">قال رسول الله ﷺ: «المسلم من سلم الناس من لسانه ويده، والمؤمن من أمنه الناس على دمائهم وأموالهم».
+          <span class="isnad">عن أبي هريرة رضي الله عنه، عن رسول الله ﷺ.</span>
+        </p>
+      </div>
     </div>
   </section>
 
-  <section class="about" id="about">
-    <h2>About this starter</h2>
-    <p>This is a minimal template meant as a jumping-off point. Swap in React, Vue, Svelte, or keep it exactly as-is — it's yours to build on.</p>
+  <section id="m3">
+    <div class="s-head"><span class="s-num">٣</span><h2>نشاط رقم (١)</h2></div>
+    <hr class="s-rule">
+    <div class="activity">
+      <div class="activity-head">نشاط رقم (١) <span class="pg">صفحة ٨٧</span></div>
+      <div class="activity-body">
+        <p class="hadith-text">قال رسول الله ﷺ: «إنكم قادمون على إخوانكم فأصلحوا نعالكم، أو قال: رحالكم، وأحسنوا لباسكم، حتى تكونوا كأنكم شامة في الناس، فإن الله عز وجل لا يحب الفحش ولا التفحش».</p>
+        <p class="qline">كيف يمكن الربط بين الحديث ومفهوم الهوية الإسلامية؟</p>
+        <button class="btn" id="act1btn" aria-expanded="false" aria-controls="act1ans">أظهر الإجابة</button>
+        <div class="reveal" id="act1ans" hidden>
+          <p>أنّ الإسلام يريد لأتباعه التميّز بكل المعاني الفضيلة والخصائص النبيلة من خلال:</p>
+          <ol>
+            <li>الإخلاص لله تعالى.</li>
+            <li>حب الله ورسوله.</li>
+            <li>العمل بأمر الله ورسوله والانتهاء عمّا نهى الله ورسوله.</li>
+          </ol>
+        </div>
+      </div>
+    </div>
   </section>
 
-  <section class="contact" id="contact">
-    <h2>Say hello</h2>
-    <form id="contactForm">
-      <input type="text" placeholder="Your name" required>
-      <input type="email" placeholder="Your email" required>
-      <textarea placeholder="Your message" rows="4" required></textarea>
-      <button type="submit" class="btn primary">Send message</button>
-    </form>
-    <p class="form-status" id="formStatus"></p>
+  <section id="m4">
+    <div class="s-head"><span class="s-num">٤</span><h2>طرق الحفاظ على الهوية</h2></div>
+    <hr class="s-rule">
+    <p class="s-note">أربع طرق مرتّبة كما في الكتاب، مع دليل كل طريقة.</p>
+    <div class="tools">
+      <button class="btn ghost" id="openAll">افتح الكل</button>
+      <button class="btn ghost" id="closeAll">أغلق الكل</button>
+    </div>
+
+    <details class="way" open>
+      <summary><span class="way-n">١</span> الالتزام بشرع الله تعالى قولًا وعملًا</summary>
+      <div class="way-body">
+        <p>فالمسلم:</p>
+        <ol class="sub">
+          <li>يتمثّل أخلاق المسلم.</li>
+          <li>يحافظ على صلاته.</li>
+        </ol>
+        <div class="proof ayah">
+          <span class="tag">أ — دليل الأول</span>
+          <p class="ayah-text">قال تعالى: ﴿فَاسْتَقِمْ كَمَا أُمِرْتَ وَمَنْ تَابَ مَعَكَ وَلَا تَطْغَوْا إِنَّهُ بِمَا تَعْمَلُونَ بَصِيرٌ﴾.</p>
+        </div>
+        <div class="proof hadith">
+          <span class="tag">ب — دليل الثاني</span>
+          <p class="hadith-text">قال رسول الله ﷺ: «إذا رأيتم الرجل يعتاد المساجد فاشهدوا له بالإيمان».</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="way">
+      <summary><span class="way-n">٢</span> الاعتزاز بالإسلام عقيدة وشرعًا</summary>
+      <div class="way-body">
+        <ol class="sub">
+          <li>الدفاع عن الإسلام والذبّ عن حياضه.</li>
+          <li>عدم التنازل عن أحكامه أو التفريط فيها، مهما كانت الظروف والأحوال، فالإسلام يعلو ولا يُعلى عليه.</li>
+        </ol>
+        <div class="proof ayah">
+          <span class="tag">الدليل</span>
+          <p class="ayah-text">قال تعالى: ﴿وَلَا تَهِنُوا وَلَا تَحْزَنُوا وَأَنْتُمُ الْأَعْلَوْنَ إِنْ كُنْتُمْ مُؤْمِنِينَ﴾.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="way">
+      <summary><span class="way-n">٣</span> الاستقلالية والتميّز والإبداع</summary>
+      <div class="way-body">
+        <p>الاستقلالية والتميّز والإبداع، والابتعاد عن التقليد والاندفاع مع التيار: فالمسلم لم يُخلق ليندفع مع التيار، وليساير الركب البشري حيث اتجه، بل خُلق ليوجّه العالم والمجتمع.</p>
+        <div class="proof hadith">
+          <span class="tag">الدليل</span>
+          <p class="hadith-text">قال رسول الله ﷺ: «لا تكونوا إمّعة؛ تقولون إن أحسن الناس أحسنّا، وإن ظلموا ظلمنا، ولكن وطّنوا أنفسكم إن أحسن الناس أن تحسنوا، وإن أساءوا فلا تظلموا».</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="way">
+      <summary><span class="way-n">٤</span> الثقة بالنفس</summary>
+      <div class="way-body">
+        <p>فهي قاعدة آمنة تسمح بالتفاعل مع الآخرين من منطلق ما نتمتع به من أمّتنا من سموّ وقوة، فلا يأخذنا ما عند الغير إلى درجة الانبهار به، فما نملك أغلى وأعظم.</p>
+        <div class="proof ayah">
+          <span class="tag">الدليل</span>
+          <p class="ayah-text">قال تعالى: ﴿كُنْتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ﴾.</p>
+        </div>
+      </div>
+    </details>
   </section>
+
+  <section id="m5">
+    <div class="s-head"><span class="s-num">٥</span><h2>الهوية والمواطنة</h2></div>
+    <hr class="s-rule">
+    <div class="grid g4">
+      <article class="card">
+        <h3>مفهوم المواطنة</h3>
+        <p>هي الشعور بحب الأهل والوطن الذي ينتمي إليه إنسان، والحرص على خيره وازدهاره.</p>
+      </article>
+      <article class="card">
+        <h3>دليل عليها</h3>
+        <p>ورد أنّ رجلًا سأل النبي ﷺ فقال: يا رسول الله! أمِن العصبية أن يحب الرجل قومه؟ قال: «لا، ولكن من العصبية أن يعين الرجل قومه على الظلم».</p>
+      </article>
+      <article class="card">
+        <h3>العلاقة بينهما</h3>
+        <ul>
+          <li>لا تعارض بين الهوية والمواطنة.</li>
+          <li>الإسلام يوجّه إلى ضرورة حب الوطن، والحرص على خيره وازدهاره.</li>
+        </ul>
+      </article>
+      <article class="card">
+        <h3>الحكمة من عناية الإسلام بالأوطان</h3>
+        <ol>
+          <li>أنه أدرك النزعة الفطرية للناس.</li>
+          <li>أنّ استقرار الناس في معاشهم وأمنهم في سربهم يشكّل أثرًا إيجابيًا في قوة الأمة ككل.</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <section id="m6">
+    <div class="s-head"><span class="s-num">٦</span><h2>تدبّر</h2></div>
+    <hr class="s-rule">
+    <div class="tadabbur">
+      <p class="intro">يقول الشاعر أبومسلم ناصر بن سالم بن عديم – رحمه الله تعالى – في قصيدة له معبّرًا فيها عن حنينه إلى وطنه عُمان:</p>
+
+      <div class="bayt"><span class="sadr">إنِّي أَشِحُّ بدمعي أَنْ يَسُحَّ على</span><span class="orn">❈</span><span class="ajz">أرضٍ ومـا هِـي لـي يـا بـرقُ أوطـانُ</span></div>
+      <div class="bayt"><span class="sadr">هَيْبَكَ اسْتَطَرَتْ فؤادي فاسْتَطِرْ رَمَقي</span><span class="orn">❈</span><span class="ajz">إلى مَـعـاهـدَ لـي فيهِـنَّ أشـجـانُ</span></div>
+      <div class="bayt"><span class="sadr">تلك المَعاهدُ ما عهدي بها انتقلت</span><span class="orn">❈</span><span class="ajz">وهُـنَّ وسْـطَ ضميري الآنَ سُكَّانُ</span></div>
+      <div class="bayt"><span class="sadr">نَأَيْتُ عنها ولكـنْ لا أفارقُـهـا</span><span class="orn">❈</span><span class="ajz">بَلَى كَمِ افترقتْ روحٌ وجُثمـانُ</span></div>
+      <div class="bayt"><span class="sadr">وكَيْفَ أنسى عُهودي في مسارحها</span><span class="orn">❈</span><span class="ajz">وهُنَّ بينَ جنانِ الخُلْـدِ بُطْنانُ</span></div>
+      <div class="bayt"><span class="sadr">مَعاهدٌ شاقَني منها مَحاسنُها</span><span class="orn">❈</span><span class="ajz">إن شَاقَ غَيري آرامٌ وغُـزلانُ</span></div>
+      <div class="bayt"><span class="sadr">لها على القلبِ ميثاقٌ يبُوءُ به</span><span class="orn">❈</span><span class="ajz">إن بَاءَ بالحبِّ في الأوطانِ إيمانُ</span></div>
+
+      <div class="gloss" id="gloss">
+        <button type="button" aria-pressed="false" data-w="أشح">أَشِحُّ: <b>أرفض</b></button>
+        <button type="button" aria-pressed="false" data-w="يسح">يَسُحُّ: <b>يسيل</b></button>
+        <button type="button" aria-pressed="false" data-w="استطرت">استطرت: <b>(أخذت)</b></button>
+        <button type="button" aria-pressed="false" data-w="معاهد">معاهد: <b>أماكن قديمة</b></button>
+        <button type="button" aria-pressed="false" data-w="بطنان">بطنان: <b>وسط</b></button>
+      </div>
+    </div>
+  </section>
+
+  <section id="m7">
+    <div class="s-head"><span class="s-num">٧</span><h2>التقويم الختامي</h2></div>
+    <hr class="s-rule">
+    <p class="s-note">صفحة ٨٢ من الكتاب — اختر الإجابة وسيظهر التصحيح فورًا.</p>
+
+    <div class="quiz-bar">
+      <span class="score">النتيجة: <em id="sc">٠</em> / ١٢</span>
+      <span class="meter"><i id="mt"></i></span>
+      <button class="btn ghost" id="showAll">أظهر جميع الإجابات</button>
+      <button class="btn ghost" id="resetQ">إعادة الحل</button>
+    </div>
+
+    <div class="qgroup">
+      <h3>السؤال الأول</h3>
+      <p class="hint">ظلّل الإجابة الصحيحة فيما يلي، وصوّب ما تحته خط إن كانت العبارة غير صحيحة.</p>
+      <div id="tfBox"></div>
+    </div>
+
+    <div class="qgroup">
+      <h3>السؤال الثاني</h3>
+      <p class="hint">ظلّل الإجابة الصحيحة لكل مفردة من المفردات الآتية.</p>
+      <div id="mcBox"></div>
+    </div>
+  </section>
+
+  <footer class="end">
+    <span>الدرس الأول: الهوية الإسلامية — الوحدة الرابعة: هويتنا</span>
+    <span>إعداد: أ. رقيه بنت سعود البوسعيدية · مدرسة الشيماء للبنات (٩–١٢)</span>
+  </footer>
 </main>
+</div>
 
-<footer>
-  <p>&copy; <span id="year"></span> Aurora. Built with plain HTML/CSS/JS.</p>
-</footer>
+<script>
+(function(){
+  var ar = function(n){ return String(n).replace(/\d/g, function(d){ return "٠١٢٣٤٥٦٧٨٩"[+d]; }); };
 
-<script src="script.js"></script>
+  /* نشاط (١) */
+  var ab = document.getElementById("act1btn"), aa = document.getElementById("act1ans");
+  ab.addEventListener("click", function(){
+    var open = aa.hidden;
+    aa.hidden = !open;
+    ab.setAttribute("aria-expanded", String(open));
+    ab.textContent = open ? "أخفِ الإجابة" : "أظهر الإجابة";
+  });
+
+  /* فتح/إغلاق طرق الحفاظ */
+  var ways = Array.prototype.slice.call(document.querySelectorAll("details.way"));
+  document.getElementById("openAll").addEventListener("click", function(){ ways.forEach(function(d){ d.open = true; }); });
+  document.getElementById("closeAll").addEventListener("click", function(){ ways.forEach(function(d){ d.open = false; }); });
+
+  /* معاني المفردات في التدبّر */
+  var poemWords = {
+    "أشح":"أَشِحُّ", "يسح":"يَسُحَّ", "استطرت":"اسْتَطَرَتْ", "معاهد":"المَعاهدُ", "بطنان":"بُطْنانُ"
+  };
+  var baytSpans = Array.prototype.slice.call(document.querySelectorAll(".bayt span"));
+  document.querySelectorAll("#gloss button").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var on = btn.getAttribute("aria-pressed") === "true";
+      document.querySelectorAll("#gloss button").forEach(function(b){ b.setAttribute("aria-pressed","false"); });
+      baytSpans.forEach(function(s){
+        if(s.dataset.orig){ s.innerHTML = s.dataset.orig; }
+      });
+      if(on) return;
+      btn.setAttribute("aria-pressed","true");
+      var word = poemWords[btn.dataset.w];
+      baytSpans.forEach(function(s){
+        if(s.textContent.indexOf(word) === -1) return;
+        if(!s.dataset.orig){ s.dataset.orig = s.innerHTML; }
+        s.innerHTML = s.dataset.orig.replace(word, '<mark class="g on">' + word + '</mark>');
+      });
+    });
+  });
+
+  /* ---- التقويم الختامي ---- */
+  var tf = [
+    { k:"أ", t:'حرصك على حب الوطن وازدهاره والدفاع عنه لا يتعارض مع <u>الهوية الإسلامية</u>.', a:true },
+    { k:"ب", t:'شعور الإنسان بحب أهله ووطنه ونصرتهم في الحق، وحرصه على رقيّهم يدل على أن العلاقة بين الهوية والمواطنة علاقة <u>تكامل</u>.', a:true },
+    { k:"ج", t:'تتفق جميع مفاهيم الهوية على مبدأ <u>الخصوصية</u>.', a:true },
+    { k:"د", t:'يشير قول الله تعالى: <span class="v">﴿كُنْتُمْ خَيْرَ أُمَّةٍ أُخْرِجَتْ لِلنَّاسِ﴾</span> إلى مبدأ <u>الثقة بالنفس</u> لدى المسلم.', a:true },
+    { k:"هـ", t:'يشير قول الله تعالى: <span class="v">﴿فَاسْتَمْسِكْ بِالَّذِي أُوحِيَ إِلَيْكَ إِنَّكَ عَلَى صِرَاطٍ مُسْتَقِيمٍ﴾</span> إلى الحفاظ على الهوية من خلال أسلوب <u>الاستقلالية</u>.', a:false, fix:"الالتزام بشرع الله تعالى" },
+    { k:"و", t:'يشير قول الرسول ﷺ: «لتتبعنّ سنن من قبلكم شبرًا بشبر وذراعًا بذراع، حتى لو سلكوا جحر ضبّ لسلكتموه» إلى إحدى وسائل الحفاظ على الهوية الإسلامية وهي <u>التبعية بالغير</u>.', a:false, fix:"الاستقلالية" },
+    { k:"ز", t:'العمل بالإسلام عقيدة وشرعًا، فعلًا وتركًا يُعرف <u>بالحضارة الإسلامية</u>.', a:false, fix:"الهوية الإسلامية" },
+    { k:"ح", t:'تطبيقي لقول الله تعالى: <span class="v">﴿فَأَقِمْ وَجْهَكَ لِلدِّينِ حَنِيفًا﴾</span> يُعد عملًا بأحد الأساليب الضرورية للحفاظ على الهوية وهي <u>الثقة بالنفس</u>.', a:false, fix:"الالتزام بشرع الله تعالى" },
+    { k:"ط", t:'قول الرسول ﷺ: «وطّنوا أنفسكم إن أحسن الناس أن تحسنوا، وإن أساءوا فلا تظلموا» يشير إلى إحدى وسائل الحفاظ على الهوية الإسلامية هي <u>الاستقلالية</u>.', a:true }
+  ];
+  var mc = [
+    { k:"أ", t:'انتقاء المسلم للرسائل الحسنة التي يرسلها عن طريق قنوات التواصل الاجتماعي دليل على:', o:["المواطنة","الاستقلالية","الوسطية","المرونة"], a:1 },
+    { k:"ب", t:'(المسلم خُلق ليوجّه العالم وليس ليسايره حيث سار واتجه). هذه العبارة تنمّي في المسلم مبدأ:', o:["الشمولية","الاستقلالية","الوسطية","الإيجابية"], a:1 },
+    { k:"ج", t:'أمر الرسول ﷺ بالجلوس عند دفن الموتى مخافةً لليهود يوجّهني إلى مبدأ:', o:["المواطنة","الثقة بالنفس","الاستقلالية","الوسطية"], a:2 }
+  ];
+
+  var total = tf.length + mc.length, answered = {}, correct = {};
+
+  function update(){
+    var n = 0, done = 0;
+    for(var k in correct){ if(correct[k]) n++; }
+    for(var j in answered){ done++; }
+    document.getElementById("sc").textContent = ar(n);
+    document.getElementById("mt").style.width = (done/total*100) + "%";
+  }
+
+  function card(id, key, text){
+    var q = document.createElement("div");
+    q.className = "q";
+    q.id = id;
+    q.innerHTML = '<div class="q-top"><span class="q-key">' + key + '</span><p class="q-text">' + text + '</p></div>'
+                + '<div class="opts"></div><div class="fb" hidden></div>';
+    return q;
+  }
+
+  var tfBox = document.getElementById("tfBox");
+  tf.forEach(function(item, i){
+    var id = "tf" + i, q = card(id, item.k, item.t);
+    var opts = q.querySelector(".opts"), fb = q.querySelector(".fb");
+    [["صح", true], ["خطأ", false]].forEach(function(pair){
+      var b = document.createElement("button");
+      b.type = "button"; b.textContent = pair[0]; b.dataset.val = String(pair[1]);
+      b.addEventListener("click", function(){
+        if(answered[id]) return;
+        answered[id] = true;
+        var ok = (pair[1] === item.a);
+        correct[id] = ok;
+        b.className = ok ? "picked-ok" : "picked-no";
+        opts.querySelectorAll("button").forEach(function(x){
+          x.disabled = true;
+          if(x.dataset.val === String(item.a) && x !== b) x.className = "show-ok";
+        });
+        fb.hidden = false;
+        fb.className = "fb " + (ok ? "good" : "bad");
+        fb.innerHTML = item.a
+          ? (ok ? "أحسنت ✓ العبارة <b>صحيحة</b> كما هي." : "الإجابة الصحيحة: <b>صح</b> — العبارة صحيحة كما هي.")
+          : "الإجابة الصحيحة: <b>خطأ</b> — والصواب: <b>" + item.fix + "</b>.";
+        update();
+      });
+      opts.appendChild(b);
+    });
+    tfBox.appendChild(q);
+  });
+
+  var mcBox = document.getElementById("mcBox");
+  mc.forEach(function(item, i){
+    var id = "mc" + i, q = card(id, item.k, item.t);
+    var opts = q.querySelector(".opts"), fb = q.querySelector(".fb");
+    item.o.forEach(function(label, idx){
+      var b = document.createElement("button");
+      b.type = "button"; b.textContent = label; b.dataset.idx = String(idx);
+      b.addEventListener("click", function(){
+        if(answered[id]) return;
+        answered[id] = true;
+        var ok = (idx === item.a);
+        correct[id] = ok;
+        b.className = ok ? "picked-ok" : "picked-no";
+        opts.querySelectorAll("button").forEach(function(x){
+          x.disabled = true;
+          if(+x.dataset.idx === item.a && x !== b) x.className = "show-ok";
+        });
+        fb.hidden = false;
+        fb.className = "fb " + (ok ? "good" : "bad");
+        fb.innerHTML = ok ? "أحسنت ✓ الإجابة الصحيحة: <b>" + item.o[item.a] + "</b>."
+                          : "الإجابة الصحيحة: <b>" + item.o[item.a] + "</b>.";
+        update();
+      });
+      opts.appendChild(b);
+    });
+    mcBox.appendChild(q);
+  });
+
+  document.getElementById("showAll").addEventListener("click", function(){
+    tf.forEach(function(item, i){
+      var q = document.getElementById("tf" + i);
+      if(answered["tf" + i]) return;
+      q.querySelectorAll(".opts button").forEach(function(x){
+        x.disabled = true;
+        if(x.dataset.val === String(item.a)) x.className = "show-ok";
+      });
+      var fb = q.querySelector(".fb");
+      fb.hidden = false; fb.className = "fb good";
+      fb.innerHTML = item.a ? "الإجابة: <b>صح</b> — العبارة صحيحة كما هي."
+                            : "الإجابة: <b>خطأ</b> — والصواب: <b>" + item.fix + "</b>.";
+    });
+    mc.forEach(function(item, i){
+      var q = document.getElementById("mc" + i);
+      if(answered["mc" + i]) return;
+      q.querySelectorAll(".opts button").forEach(function(x){
+        x.disabled = true;
+        if(+x.dataset.idx === item.a) x.className = "show-ok";
+      });
+      var fb = q.querySelector(".fb");
+      fb.hidden = false; fb.className = "fb good";
+      fb.innerHTML = "الإجابة: <b>" + item.o[item.a] + "</b>.";
+    });
+  });
+
+  document.getElementById("resetQ").addEventListener("click", function(){
+    answered = {}; correct = {};
+    document.querySelectorAll(".q").forEach(function(q){
+      q.querySelectorAll(".opts button").forEach(function(x){ x.disabled = false; x.className = ""; });
+      var fb = q.querySelector(".fb"); fb.hidden = true; fb.innerHTML = "";
+    });
+    update();
+  });
+
+  update();
+})();
+</script>
 </body>
 </html>
