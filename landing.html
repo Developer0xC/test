@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aurora — Simple Landing Page</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="nav">
+  <div class="nav-inner">
+    <div class="logo">Aurora</div>
+    <nav>
+      <a href="#features">Features</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <h1>Build something <span>beautiful</span> today.</h1>
+    <p>A tiny starter site — clean, fast, and framework-free. Edit the files in this folder and refresh to see changes instantly.</p>
+    <div class="hero-actions">
+      <button class="btn primary" id="ctaBtn">Get Started</button>
+      <a class="btn secondary" href="#features">Learn more</a>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <div class="feature-card">
+      <div class="icon">⚡</div>
+      <h3>Fast</h3>
+      <p>No build step, no dependencies. Just open <code>index.html</code> and go.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">🎨</div>
+      <h3>Customizable</h3>
+      <p>Plain HTML, CSS and JS — easy to tweak into whatever you need next.</p>
+    </div>
+    <div class="feature-card">
+      <div class="icon">📦</div>
+      <h3>Self-contained</h3>
+      <p>Everything for this project lives in its own <code>test/</code> folder.</p>
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    <h2>About this starter</h2>
+    <p>This is a minimal template meant as a jumping-off point. Swap in React, Vue, Svelte, or keep it exactly as-is — it's yours to build on.</p>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Say hello</h2>
+    <form id="contactForm">
+      <input type="text" placeholder="Your name" required>
+      <input type="email" placeholder="Your email" required>
+      <textarea placeholder="Your message" rows="4" required></textarea>
+      <button type="submit" class="btn primary">Send message</button>
+    </form>
+    <p class="form-status" id="formStatus"></p>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; <span id="year"></span> Aurora. Built with plain HTML/CSS/JS.</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
